@@ -7,25 +7,34 @@
 <meta name="robots" content="index, follow">
 <title>Tell-Don’t-Ask | lmitelman</title>
 <meta name="keywords" content="">
-<meta name="description" content="In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
-class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.temperature = this.temperature &#43; value; } askTemperature(): number { return this.temperature; } }; class Alarm() { sound(): void { console.log(&#39;RIIING!&#39;); } }; With this &ldquo;asking&rdquo; approach, to detect the temperature and sound an alarm, we should:">
+<meta name="description" content="A few weeks ago one of the best engineers in my team, the great Fer, made a comment in a pull request:
+&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;
+Let&rsquo;s talk a bit about this&hellip;
+In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
+class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.">
 <meta name="author" content="lmitelman">
-<link rel="canonical" href="https://lmitelman.github.io/posts/new-note/">
+<link rel="canonical" href="https://lmitelman.github.io/posts/tell-dont-ask/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5ff00d2c5ac45858ed4837309b4342a339f82e32817a5bbbc94231b1e904976a.css" integrity="sha256-X/ANLFrEWFjtSDcwm0NCozn4LjKBelu7yUIxsekEl2o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lmitelman.github.io/favicon.ico">
 <link rel="apple-touch-icon" href="https://lmitelman.github.io/apple-touch-icon.png">
 
 <meta name="twitter:title" content="Tell-Don’t-Ask | lmitelman" />
-<meta name="twitter:description" content="In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
-class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.temperature = this.temperature &#43; value; } askTemperature(): number { return this.temperature; } }; class Alarm() { sound(): void { console.log(&#39;RIIING!&#39;); } }; With this &ldquo;asking&rdquo; approach, to detect the temperature and sound an alarm, we should:" />
+<meta name="twitter:description" content="A few weeks ago one of the best engineers in my team, the great Fer, made a comment in a pull request:
+&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;
+Let&rsquo;s talk a bit about this&hellip;
+In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
+class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this." />
 <meta property="og:title" content="Tell-Don’t-Ask | lmitelman" />
-<meta property="og:description" content="In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
-class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.temperature = this.temperature &#43; value; } askTemperature(): number { return this.temperature; } }; class Alarm() { sound(): void { console.log(&#39;RIIING!&#39;); } }; With this &ldquo;asking&rdquo; approach, to detect the temperature and sound an alarm, we should:" />
+<meta property="og:description" content="A few weeks ago one of the best engineers in my team, the great Fer, made a comment in a pull request:
+&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;
+Let&rsquo;s talk a bit about this&hellip;
+In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
+class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lmitelman.github.io/posts/new-note/" />
+<meta property="og:url" content="https://lmitelman.github.io/posts/tell-dont-ask/" />
 <meta property="article:section" content="posts" />
-  <meta property="article:published_time" content="2022-09-08T21:33:12-03:00" />
-  <meta property="article:modified_time" content="2022-09-08T21:33:12-03:00" />
+  <meta property="article:published_time" content="2022-05-08T21:33:12-03:00" />
+  <meta property="article:modified_time" content="2022-05-08T21:33:12-03:00" />
 
 
 <script type="application/ld+json">
@@ -43,7 +52,7 @@ class Thermometer() { private temperature: number = 0; increaseTemperature(value
       "@type": "ListItem",
       "position":  2 ,
       "name": "Tell-Don’t-Ask",
-      "item": "https://lmitelman.github.io/posts/new-note/"
+      "item": "https://lmitelman.github.io/posts/tell-dont-ask/"
     }
   ]
 }
@@ -54,21 +63,21 @@ class Thermometer() { private temperature: number = 0; increaseTemperature(value
   "@type": "BlogPosting",
   "headline": "Tell-Don’t-Ask | lmitelman",
   "name": "Tell-Don’t-Ask",
-  "description": "In object-oriented software, a typical use case is to execute logic based on an object\u0026rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:\nclass Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.temperature = this.temperature + value; } askTemperature(): number { return this.temperature; } }; class Alarm() { sound(): void { console.log(\u0026#39;RIIING!\u0026#39;); } }; With this \u0026ldquo;asking\u0026rdquo; approach, to detect the temperature and sound an alarm, we should:",
+  "description": "A few weeks ago one of the best engineers in my team, the great Fer, made a comment in a pull request:\n\u0026ldquo;Remember not to break the Tell-Don\u0026rsquo;t-Ask principle.\u0026rdquo;\nLet\u0026rsquo;s talk a bit about this\u0026hellip;\nIn object-oriented software, a typical use case is to execute logic based on an object\u0026rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:\nclass Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.",
   "keywords": [
     
   ],
-  "wordCount" : "280",
+  "wordCount" : "315",
   "inLanguage": "en",
-  "datePublished": "2022-09-08T21:33:12-03:00",
-  "dateModified": "2022-09-08T21:33:12-03:00",
+  "datePublished": "2022-05-08T21:33:12-03:00",
+  "dateModified": "2022-05-08T21:33:12-03:00",
   "author":{
     "@type": "Person",
     "name": "lmitelman"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://lmitelman.github.io/posts/new-note/"
+    "@id": "https://lmitelman.github.io/posts/tell-dont-ask/"
   },
   "publisher": {
     "@type": "Organization",
@@ -184,7 +193,7 @@ function toggleThemeListener() {
     <h1 class="post-title">Tell-Don’t-Ask</h1>
     <div class="post-meta"><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
-  <span>September 8, 2022</span></span><span class="meta-item">
+  <span>May 8, 2022</span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
   <span>2 min</span></span>
 
@@ -193,7 +202,12 @@ function toggleThemeListener() {
     </div>
   </header> 
 
-  <div class="post-content"><p>In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state.
+  <div class="post-content"><p>A few weeks ago one of the best engineers in my team, the great <a href="https://github.com/hack2024">Fer</a>, made a comment in a pull request:</p>
+<blockquote>
+<p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
+</blockquote>
+<p>Let&rsquo;s talk a bit about this&hellip;</p>
+<p>In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state.
 For example, sounding an alarm in case our thermometer reaches a certain temperature:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer() {</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">temperature</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>

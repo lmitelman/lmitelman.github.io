@@ -5,16 +5,24 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lmitelman</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Sep 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tell-Don’t-Ask</title>
-      <link>https://lmitelman.github.io/posts/new-note/</link>
-      <pubDate>Thu, 08 Sep 2022 21:33:12 -0300</pubDate>
+      <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
+      <pubDate>Sun, 08 May 2022 21:33:12 -0300</pubDate>
       
-      <guid>https://lmitelman.github.io/posts/new-note/</guid>
-      <description>In object-oriented software, a typical use case is to execute logic based on an object&amp;rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
-class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.temperature = this.temperature + value; } askTemperature(): number { return this.temperature; } }; class Alarm() { sound(): void { console.log(&amp;#39;RIIING!&amp;#39;); } }; With this &amp;ldquo;asking&amp;rdquo; approach, to detect the temperature and sound an alarm, we should:</description>
-      <content:encoded><![CDATA[<p>In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state.
+      <guid>https://lmitelman.github.io/posts/tell-dont-ask/</guid>
+      <description>A few weeks ago one of the best engineers in my team, the great Fer, made a comment in a pull request:
+&amp;ldquo;Remember not to break the Tell-Don&amp;rsquo;t-Ask principle.&amp;rdquo;
+Let&amp;rsquo;s talk a bit about this&amp;hellip;
+In object-oriented software, a typical use case is to execute logic based on an object&amp;rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
+class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.</description>
+      <content:encoded><![CDATA[<p>A few weeks ago one of the best engineers in my team, the great <a href="https://github.com/hack2024">Fer</a>, made a comment in a pull request:</p>
+<blockquote>
+<p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
+</blockquote>
+<p>Let&rsquo;s talk a bit about this&hellip;</p>
+<p>In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state.
 For example, sounding an alarm in case our thermometer reaches a certain temperature:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer() {</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">temperature</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
