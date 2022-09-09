@@ -84,3 +84,6 @@ thermometer.increaseTemperature(35);
 
 In conclusion, it is correct to "ask" for the state of an object and then execute a certain logic. However, if that logic is related to the object, it may need to be moved and be the responsibility of the object itself.
 
+---
+
+- *[The Art of Enbugging, Andy Hunt and Dave Thomas (2003)](https://media.pragprog.com/articles/jan_03_enbug.pdf).*
