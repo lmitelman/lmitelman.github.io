@@ -41,7 +41,6 @@ languages:
 outputs:
   home:
     - HTML
-    - JSON
 
 params:
   env: production
@@ -55,7 +54,6 @@ params:
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: false
   ShowToc: true
   # comments: false
   # images: ["papermod-cover.png"]
@@ -91,10 +89,10 @@ params:
     #Text: "Suggest Changes" # edit text
     #appendFilePath: true # to append file path to Edit link
 
-  label:
-      text: "Home"
-      icon: icon.png
-      iconHeight: 35
+  # label:
+  #     text: "Home"
+  #     icon: icon.png
+  #     iconHeight: 35
 
   # analytics:
   #     google:
