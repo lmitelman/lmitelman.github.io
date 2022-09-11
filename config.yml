@@ -2,6 +2,7 @@ baseURL: 'https://lmitelman.github.io/'
 title: 'lmitelman.com'
 theme: "PaperModX"
 
+publishDir: "docs"
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -28,6 +29,9 @@ languages:
         - name: Posts
           url: /posts/
           weight: 1
+        - name: Search
+          url: /search/
+          weight: 1
         # - name: About
         #   url: about/
         #   weight: 2
@@ -41,6 +45,7 @@ languages:
 outputs:
   home:
     - HTML
+    - JSON
 
 params:
   env: production
