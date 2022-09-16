@@ -79,7 +79,7 @@ params:
   homeInfoParams:
     Title: "Lautaro Mitelman"
     Content: >
-      _"On the shoulders of giants."_
+      _"Standing on the shoulders of giants"_
 
   socialIcons:
     - name: github
