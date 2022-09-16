@@ -427,7 +427,7 @@
   /* TextWhitespace */ }
   .dark .chroma {
     color: #f8f8f2;
-    background-color: #282a36; }
+    background-color: #142022; }
   .dark .chroma .lntd {
     vertical-align: top;
     padding: 0;

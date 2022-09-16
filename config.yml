@@ -78,8 +78,8 @@ params:
 
   homeInfoParams:
     Title: "Lautaro Mitelman"
-    Content:
-      "A hombros de gigantes."
+    Content: >
+      _"On the shoulders of giants."_
 
   socialIcons:
     - name: github
