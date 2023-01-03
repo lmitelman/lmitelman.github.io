@@ -5,59 +5,7 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lmitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Dec 2022 08:25:00 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Generics</title>
-      <link>https://lmitelman.github.io/posts/generics/</link>
-      <pubDate>Tue, 20 Dec 2022 08:25:00 -0300</pubDate>
-      
-      <guid>https://lmitelman.github.io/posts/generics/</guid>
-      <description>https://shareg.pt/voKuLY5 Domain-Driven Design Quickly, Abel Avram and Floyd Marinescu (2007). </description>
-      <content:encoded><![CDATA[<h2 id="httpssharegptvokuly5"><a href="https://shareg.pt/voKuLY5">https://shareg.pt/voKuLY5</a></h2>
-<ul>
-<li><em><a href="https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255">Domain-Driven Design Quickly, Abel Avram and Floyd Marinescu (2007)</a>.</em></li>
-</ul>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Entities, DTOs and Value Objects</title>
-      <link>https://lmitelman.github.io/posts/dto-vs-vo/</link>
-      <pubDate>Sun, 11 Dec 2022 00:15:00 -0300</pubDate>
-      
-      <guid>https://lmitelman.github.io/posts/dto-vs-vo/</guid>
-      <description>To raise our technical standards, with my teammates we decided to go back to basics for a few weeks. Under the wings of my great colleagues Fer and Cesar, our goal was to reinforce the fundamentals of Domain Driven Design.
-As you have read in the title, today we will explore two important design patterns to transfer data between different layers of an application: Entities, Data Transfer Objects and Value Objects.</description>
-      <content:encoded><![CDATA[<p>To raise our technical standards, with my teammates we decided to go back to basics for a few weeks. Under the wings of my great colleagues <a href="https://github.com/hack2024">Fer</a> and <a href="https://github.com/cesar-lp">Cesar</a>, our goal was to reinforce the fundamentals of <em>Domain Driven Design</em>.</p>
-<p>As you have read in the title, today we will explore two important design patterns to transfer data between different layers of an application: <strong>Entities</strong>, <strong>Data Transfer Objects</strong> and <strong>Value Objects</strong>.</p>
-<blockquote>
-<p><em>&ldquo;If you can’t rederive concepts from the basics as you need them, you’re lost.&rdquo;</em></p>
-</blockquote>
-<p><a href="https://sharegpt.com/c/x25sNIb">https://sharegpt.com/c/x25sNIb</a>
-<a href="https://sharegpt.com/c/IE17oX8">https://sharegpt.com/c/IE17oX8</a></p>
-<br>
-<h3 id="what-is-an-entity">What is an Entity?</h3>
-<h3 id="what-is-a-dto">What is a DTO?</h3>
-<p>A <strong>Data Transfer Object</strong> (DTO) is a data structure that is used to represent the data of an object in an application, without having any behavior or logic associated with it.</p>
-<p>For example, if a user&rsquo;s information needs to be passed from a web application&rsquo;s frontend to its backend, a User DTO could be used to represent the user&rsquo;s data in a consistent and easy-to-use format.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">User</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">constructor</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">public</span> <span class="nx">id</span>: <span class="kt">number</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">public</span> <span class="nx">firstName</span>: <span class="kt">string</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">public</span> <span class="nx">lastName</span>: <span class="kt">string</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">public</span> <span class="nx">email</span>: <span class="kt">string</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="what-is-a-value-object">What is a Value Object?</h3>
-<p>On the other hand, a <strong>Value Object</strong> is a type of object that is defined by its value, rather than by its identity. Value Objects can be used in many different ways, but one common use case is to represent data that is expected to be consistent and immutable.</p>
-<p><ins>When should you use it?<ins></p>
-<hr>
-<ul>
-<li><em><a href="https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255">Domain-Driven Design Quickly, Abel Avram and Floyd Marinescu (2007)</a>.</em></li>
-</ul>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tell-Don’t-Ask</title>
       <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
