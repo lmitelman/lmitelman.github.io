@@ -5,7 +5,44 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lmitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 20:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concurrency vs. Parallelism</title>
+      <link>https://lmitelman.github.io/posts/concurrency-parallelism/</link>
+      <pubDate>Fri, 24 Feb 2023 20:33:12 -0300</pubDate>
+      
+      <guid>https://lmitelman.github.io/posts/concurrency-parallelism/</guid>
+      <description> Communicating Sequential Processes, C.A.R. Hoare (1978). </description>
+      <content:encoded><![CDATA[<!-- https://sharegpt.com/c/urK3m71 -->
+<!-- https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism -->
+<hr>
+<ul>
+<li><em><a href="https://www.cs.cmu.edu/~crary/819-f09/Hoare78.pdf">Communicating Sequential Processes, C.A.R. Hoare (1978)</a>.</em></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Go-ing on</title>
+      <link>https://lmitelman.github.io/posts/to-go-or-not-to-go/</link>
+      <pubDate>Mon, 13 Feb 2023 20:33:12 -0300</pubDate>
+      
+      <guid>https://lmitelman.github.io/posts/to-go-or-not-to-go/</guid>
+      <description>My team and I decided to take the leap, and use Go as the language of choice for our latest project.
+This is a great opportunity for me to expand my skillset, and learn about Go&amp;rsquo;s unique features and benefits.
+Although I have several years of development experience, I have never used an alternative language to JavaScript or TypeScript, so in this post we will explore the features of Go and compare it to these other two languages:</description>
+      <content:encoded><![CDATA[<p>My team and I decided to take the leap, and use <a href="https://go.dev/">Go</a> as the language of choice for our latest project.</p>
+<p>This is a great opportunity for me to expand my skillset, and learn about Go&rsquo;s unique features and benefits.</p>
+<p>Although I have several years of development experience, I have never used an alternative language to <strong>JavaScript</strong> or <strong>TypeScript</strong>, so in this post we will explore the features of Go and compare it to these other two languages:</p>
+</br>
+<h4 id="insmachine-code-conversionins"><ins>Machine-code conversion</ins></h4>
+<hr>
+<ul>
+<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">Link, Author/s (Year)</a>.</em></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Tell-Don’t-Ask</title>
       <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
