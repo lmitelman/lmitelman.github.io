@@ -4,77 +4,76 @@ date: 2022-05-08T21:33:12-03:00
 draft: false
 ---
 
-A few weeks ago one of the best engineers in my team, the great [Fer](https://github.com/hack2024), made a comment in a pull request:
+A few weeks ago, one of the best engineers on my team, the great [Fer](https://github.com/hack2024), made an important comment in a pull request:
 
 > _"Remember not to break the Tell-Don't-Ask principle."_
 
-Let's talk a bit about this...
+Let's delve into this concept a bit...
 
-In object-oriented software, a typical use case is to execute logic based on an object's internal state.
-For example, sounding an alarm in case our thermometer reaches a certain temperature:
+In object-oriented software, a typical use case involves executing logic based on an object's internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:
 
 ```typescript
-class Thermometer() {
+class Thermometer {
   private temperature: number = 0;
-  
+
   increaseTemperature(value: number): void {
-    this.temperature = this.temperature + value;
+    this.temperature += value;
   }
 
-  askTemperature(): number {
+  getTemperature(): number {
     return this.temperature;
   }
 };
 
-class Alarm() {
+class Alarm {
   sound(): void {
     console.log('RIIING!');
   }
 };
 ```
 
-With this "asking" approach, to detect the temperature and sound an alarm, we should:
+In this "asking" approach, to detect the temperature and sound an alarm, we would have to:
 
 ```typescript
 const thermometer = new Thermometer();
 thermometer.increaseTemperature(35);
-const temperature = thermometer.askTemperature();
+const temperature = thermometer.getTemperature();
 if (temperature > 30) {
   const alarm = new Alarm();
   alarm.sound();
 };
 ```
-If you are doing this, chances are that the logic you are implementing should be the object's responsibility. 
-It is very likely that our thermometer should be in charge of sounding the alarm in case of reaching a certain temperature.
+
+However, following the Tell-Don't-Ask principle suggests that the logic should reside within the object itself if it is related to that object. In other words, the thermometer should be responsible for sounding the alarm when it reaches a certain temperature. This promotes more object-oriented code as opposed to procedural code.
 > Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.
 
-So, let's refactor our classes with a "telling" approach...
+With this in mind, let's refactor our classes using a "telling" approach:
 
 ```typescript
-class Thermometer() {
+class Thermometer {
   private temperature: number = 0;
   private alarm: Alarm;
 
   constructor(alarm: Alarm) {
     this.alarm = alarm;
   }
-  
+
   increaseTemperature(value: number): void {
-    this.temperature = this.temperature + value;
+    this.temperature += value;
     if (this.temperature > 30) {
       this.alarm.sound();
-    };
+    }
   }
 };
 
-class Alarm() {
+class Alarm {
   sound(): void {
     console.log('RIIING!');
   }
 };
 ```
 
-Now, instead of us checking the thermometer's internal status to sound the alarm, we "tell" him to do that:
+Now, instead of checking the thermometer's internal status to sound the alarm, we "tell" the thermometer to handle that:
 
 ```typescript
 const alarm = new Alarm();
@@ -82,7 +81,7 @@ const thermometer = new Thermometer(alarm);
 thermometer.increaseTemperature(35);
 ```
 
-In conclusion, it is correct to "ask" for the state of an object and then execute a certain logic. However, if that logic is related to the object, it may need to be moved and be the responsibility of the object itself.
+To summarize, it is acceptable to "ask" for the state of an object and then execute certain logic based on that information. However, if that logic is inherently related to the object, it should be moved and become the responsibility of the object itself. By adhering to the Tell-Don't-Ask principle, we can create more maintainable and object-oriented code.
 
 ---
 

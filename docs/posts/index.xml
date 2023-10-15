@@ -5,82 +5,101 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lmitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 10:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(t)RPC</title>
+      <link>https://lmitelman.github.io/posts/trpc/</link>
+      <pubDate>Sat, 14 Oct 2023 10:33:12 -0300</pubDate>
+      
+      <guid>https://lmitelman.github.io/posts/trpc/</guid>
+      <description>Remote Procedure Call (RPC) is a seasoned protocol that enables a program to execute procedures in another address space, often on a different machine. While it might sound technical, its core principle is simple: calling procedures remotely instead of locally.
+&amp;ldquo;Unlike the resource-centric nature of REST, RPC revolves around invoking server-side procedures.&amp;rdquo;
+Building upon the foundation laid by RPC, tRPC brings remote procedure calls to the contemporary world of TypeScript-centric web development.</description>
+      <content:encoded><![CDATA[<p>Remote Procedure Call (<em>RPC</em>) is a seasoned protocol that enables a program to execute procedures in another address space, often on a different machine. While it might sound technical, its core principle is simple: <em>calling procedures remotely instead of locally</em>.</p>
+<blockquote>
+<p>&ldquo;Unlike the resource-centric nature of REST, RPC revolves around invoking server-side procedures.&rdquo;</p>
+</blockquote>
+<p>Building upon the foundation laid by RPC, <em>tRPC</em> brings remote procedure calls to the contemporary world of TypeScript-centric web development. No manual type definitions. No endpoint specifications. No explicit request methods.</p>
+<p><a href="https://chat.openai.com/share/54877d94-2b9f-426a-a1e4-568288bf55b7">https://chat.openai.com/share/54877d94-2b9f-426a-a1e4-568288bf55b7</a></p>
+<hr>
+<ul>
+<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">The Art of Enbugging, Andy Hunt and Dave Thomas (2003)</a>.</em></li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Tell-Don’t-Ask</title>
       <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
       <pubDate>Sun, 08 May 2022 21:33:12 -0300</pubDate>
       
       <guid>https://lmitelman.github.io/posts/tell-dont-ask/</guid>
-      <description>A few weeks ago one of the best engineers in my team, the great Fer, made a comment in a pull request:
+      <description>A few weeks ago, one of the best engineers on my team, the great Fer, made an important comment in a pull request:
 &amp;ldquo;Remember not to break the Tell-Don&amp;rsquo;t-Ask principle.&amp;rdquo;
-Let&amp;rsquo;s talk a bit about this&amp;hellip;
-In object-oriented software, a typical use case is to execute logic based on an object&amp;rsquo;s internal state. For example, sounding an alarm in case our thermometer reaches a certain temperature:
-class Thermometer() { private temperature: number = 0; increaseTemperature(value: number): void { this.</description>
-      <content:encoded><![CDATA[<p>A few weeks ago one of the best engineers in my team, the great <a href="https://github.com/hack2024">Fer</a>, made a comment in a pull request:</p>
+Let&amp;rsquo;s delve into this concept a bit&amp;hellip;
+In object-oriented software, a typical use case involves executing logic based on an object&amp;rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</description>
+      <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team, the great <a href="https://github.com/hack2024">Fer</a>, made an important comment in a pull request:</p>
 <blockquote>
 <p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
 </blockquote>
-<p>Let&rsquo;s talk a bit about this&hellip;</p>
-<p>In object-oriented software, a typical use case is to execute logic based on an object&rsquo;s internal state.
-For example, sounding an alarm in case our thermometer reaches a certain temperature:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer() {</span>
+<p>Let&rsquo;s delve into this concept a bit&hellip;</p>
+<p>In object-oriented software, a typical use case involves executing logic based on an object&rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">temperature</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">increaseTemperature</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">number</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">+=</span> <span class="nx">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">askTemperature</span><span class="p">()</span><span class="o">:</span> <span class="kt">number</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">getTemperature</span><span class="p">()</span><span class="o">:</span> <span class="kt">number</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Alarm() {</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Alarm</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">sound</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;RIIING!&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p>With this &ldquo;asking&rdquo; approach, to detect the temperature and sound an alarm, we should:</p>
+</span></span></code></pre></div><p>In this &ldquo;asking&rdquo; approach, to detect the temperature and sound an alarm, we would have to:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">thermometer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Thermometer</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="nx">thermometer</span><span class="p">.</span><span class="nx">increaseTemperature</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">temperature</span> <span class="o">=</span> <span class="nx">thermometer</span><span class="p">.</span><span class="nx">askTemperature</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">temperature</span> <span class="o">=</span> <span class="nx">thermometer</span><span class="p">.</span><span class="nx">getTemperature</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">temperature</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">alarm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Alarm</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">alarm</span><span class="p">.</span><span class="nx">sound</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p>If you are doing this, chances are that the logic you are implementing should be the object&rsquo;s responsibility.
-It is very likely that our thermometer should be in charge of sounding the alarm in case of reaching a certain temperature.</p>
+</span></span></code></pre></div><p>However, following the Tell-Don&rsquo;t-Ask principle suggests that the logic should reside within the object itself if it is related to that object. In other words, the thermometer should be responsible for sounding the alarm when it reaches a certain temperature. This promotes more object-oriented code as opposed to procedural code.</p>
 <blockquote>
 <p>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</p>
 </blockquote>
-<p>So, let&rsquo;s refactor our classes with a &ldquo;telling&rdquo; approach&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer() {</span>
+<p>With this in mind, let&rsquo;s refactor our classes using a &ldquo;telling&rdquo; approach:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">temperature</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">alarm</span>: <span class="kt">Alarm</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kr">constructor</span><span class="p">(</span><span class="nx">alarm</span>: <span class="kt">Alarm</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">alarm</span> <span class="o">=</span> <span class="nx">alarm</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">increaseTemperature</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">number</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">+=</span> <span class="nx">value</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">temperature</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">alarm</span><span class="p">.</span><span class="nx">sound</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Alarm() {</span>
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Alarm</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">sound</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;RIIING!&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p>Now, instead of us checking the thermometer&rsquo;s internal status to sound the alarm, we &ldquo;tell&rdquo; him to do that:</p>
+</span></span></code></pre></div><p>Now, instead of checking the thermometer&rsquo;s internal status to sound the alarm, we &ldquo;tell&rdquo; the thermometer to handle that:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">alarm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Alarm</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">thermometer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Thermometer</span><span class="p">(</span><span class="nx">alarm</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">thermometer</span><span class="p">.</span><span class="nx">increaseTemperature</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
-</span></span></code></pre></div><p>In conclusion, it is correct to &ldquo;ask&rdquo; for the state of an object and then execute a certain logic. However, if that logic is related to the object, it may need to be moved and be the responsibility of the object itself.</p>
+</span></span></code></pre></div><p>To summarize, it is acceptable to &ldquo;ask&rdquo; for the state of an object and then execute certain logic based on that information. However, if that logic is inherently related to the object, it should be moved and become the responsibility of the object itself. By adhering to the Tell-Don&rsquo;t-Ask principle, we can create more maintainable and object-oriented code.</p>
 <hr>
 <ul>
 <li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">The Art of Enbugging, Andy Hunt and Dave Thomas (2003)</a>.</em></li>
