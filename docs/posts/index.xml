@@ -5,42 +5,22 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lmitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 14 Oct 2023 10:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>(t)RPC</title>
-      <link>https://lmitelman.github.io/posts/trpc/</link>
-      <pubDate>Sat, 14 Oct 2023 10:33:12 -0300</pubDate>
-      
-      <guid>https://lmitelman.github.io/posts/trpc/</guid>
-      <description>Remote Procedure Call (RPC) is a seasoned protocol that enables a program to execute procedures in another address space, often on a different machine. While it might sound technical, its core principle is simple: calling procedures remotely instead of locally.
-&amp;ldquo;Unlike the resource-centric nature of REST, RPC revolves around invoking server-side procedures.&amp;rdquo;
-Building upon the foundation laid by RPC, tRPC brings remote procedure calls to the contemporary world of TypeScript-centric web development.</description>
-      <content:encoded><![CDATA[<p>Remote Procedure Call (<em>RPC</em>) is a seasoned protocol that enables a program to execute procedures in another address space, often on a different machine. While it might sound technical, its core principle is simple: <em>calling procedures remotely instead of locally</em>.</p>
-<blockquote>
-<p>&ldquo;Unlike the resource-centric nature of REST, RPC revolves around invoking server-side procedures.&rdquo;</p>
-</blockquote>
-<p>Building upon the foundation laid by RPC, <em>tRPC</em> brings remote procedure calls to the contemporary world of TypeScript-centric web development. No manual type definitions. No endpoint specifications. No explicit request methods.</p>
-<p><a href="https://chat.openai.com/share/54877d94-2b9f-426a-a1e4-568288bf55b7">https://chat.openai.com/share/54877d94-2b9f-426a-a1e4-568288bf55b7</a></p>
-<hr>
-<ul>
-<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">The Art of Enbugging, Andy Hunt and Dave Thomas (2003)</a>.</em></li>
-</ul>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tell-Don’t-Ask</title>
       <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
       <pubDate>Sun, 08 May 2022 21:33:12 -0300</pubDate>
       
       <guid>https://lmitelman.github.io/posts/tell-dont-ask/</guid>
-      <description>A few weeks ago, one of the best engineers on my team, the great Fer, made an important comment in a pull request:
+      <description>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:
 &amp;ldquo;Remember not to break the Tell-Don&amp;rsquo;t-Ask principle.&amp;rdquo;
+— The great Fer.
 Let&amp;rsquo;s delve into this concept a bit&amp;hellip;
 In object-oriented software, a typical use case involves executing logic based on an object&amp;rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</description>
-      <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team, the great <a href="https://github.com/hack2024">Fer</a>, made an important comment in a pull request:</p>
+      <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:</p>
 <blockquote>
 <p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
+<p>— The great <a href="https://github.com/hack2024">Fer</a>.</p>
 </blockquote>
 <p>Let&rsquo;s delve into this concept a bit&hellip;</p>
 <p>In object-oriented software, a typical use case involves executing logic based on an object&rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</p>
@@ -71,7 +51,7 @@ In object-oriented software, a typical use case involves executing logic based o
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>However, following the Tell-Don&rsquo;t-Ask principle suggests that the logic should reside within the object itself if it is related to that object. In other words, the thermometer should be responsible for sounding the alarm when it reaches a certain temperature. This promotes more object-oriented code as opposed to procedural code.</p>
 <blockquote>
-<p>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</p>
+<p><strong>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</strong></p>
 </blockquote>
 <p>With this in mind, let&rsquo;s refactor our classes using a &ldquo;telling&rdquo; approach:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>

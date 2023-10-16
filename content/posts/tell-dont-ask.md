@@ -4,9 +4,11 @@ date: 2022-05-08T21:33:12-03:00
 draft: false
 ---
 
-A few weeks ago, one of the best engineers on my team, the great [Fer](https://github.com/hack2024), made an important comment in a pull request:
+A few weeks ago, one of the best engineers on my team made an important comment in a pull request:
 
-> _"Remember not to break the Tell-Don't-Ask principle."_
+>  _"Remember not to break the Tell-Don't-Ask principle."_
+>
+> — The great [Fer](https://github.com/hack2024).
 
 Let's delve into this concept a bit...
 
@@ -45,7 +47,8 @@ if (temperature > 30) {
 ```
 
 However, following the Tell-Don't-Ask principle suggests that the logic should reside within the object itself if it is related to that object. In other words, the thermometer should be responsible for sounding the alarm when it reaches a certain temperature. This promotes more object-oriented code as opposed to procedural code.
-> Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.
+
+> **Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.**
 
 With this in mind, let's refactor our classes using a "telling" approach:
 
