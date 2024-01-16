@@ -1,5 +1,5 @@
 /* Background */ .bg { color: #abb2bf; background-color: #282c34; }
-/* PreWrapper */ .chroma { color: #abb2bf; background-color: #282c34; }
+/* PreWrapper */ .chroma { color: #b2b2b2; background-color: #282c34; }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #e06c75 }
 /* CodeLine */ .chroma .cl {  }
@@ -9,13 +9,13 @@
 /* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #5c6370 }
 /* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #5c6370 }
 /* Line */ .chroma .line { display: flex; }
-/* Keyword */ .chroma .k { color: #c678dd; font-weight: bold }
-/* KeywordConstant */ .chroma .kc { color: #c678dd; font-weight: bold }
-/* KeywordDeclaration */ .chroma .kd { color: #c678dd; font-weight: bold }
-/* KeywordNamespace */ .chroma .kn { color: #c678dd; font-weight: bold }
+/* Keyword */ .chroma .k { color: #81A1C1; font-weight: bold }
+/* KeywordConstant */ .chroma .kc { color: #81A1C1; font-weight: bold }
+/* KeywordDeclaration */ .chroma .kd { color: #81A1C1; font-weight: bold }
+/* KeywordNamespace */ .chroma .kn { color: #81A1C1; font-weight: bold }
 /* KeywordPseudo */ .chroma .kp { color: #c678dd }
-/* KeywordReserved */ .chroma .kr { color: #c678dd; font-weight: bold }
-/* KeywordType */ .chroma .kt { color: #c678dd }
+/* KeywordReserved */ .chroma .kr { color: #81A1C1; font-weight: bold }
+/* KeywordType */ .chroma .kt { color: #c678ed }
 /* Name */ .chroma .n {  }
 /* NameAttribute */ .chroma .na { color: #8fbcbb }
 /* NameBuiltin */ .chroma .nb { color: #c678dd }
@@ -61,7 +61,7 @@
 /* LiteralNumberIntegerLong */ .chroma .il { color: #b48ead }
 /* LiteralNumberOct */ .chroma .mo { color: #b48ead }
 /* Operator */ .chroma .o { color: #c678dd }
-/* OperatorWord */ .chroma .ow { color: #c678dd; font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: #81A1C1; font-weight: bold }
 /* Punctuation */ .chroma .p { color: #eceff4 }
 /* Comment */ .chroma .c { color: #616e87; font-style: italic }
 /* CommentHashbang */ .chroma .ch { color: #616e87; font-style: italic }
