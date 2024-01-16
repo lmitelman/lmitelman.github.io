@@ -5,69 +5,7 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lmitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Dec 2023 10:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Let&#39;s Go</title>
-      <link>https://lmitelman.github.io/posts/lets-go/</link>
-      <pubDate>Fri, 29 Dec 2023 10:33:12 -0300</pubDate>
-      
-      <guid>https://lmitelman.github.io/posts/lets-go/</guid>
-      <description>En un intento por lograr que nuestros servicios sean más óptimos, performantes y veloces, con nuestro equipo en Pomelo decidimos comenzar a implentar Go en algunos de los microservicios dentro de nuestra arquitectura.
-¿Por que Go
-(Composing Structs) Embedded Structures in Golang In the Go programming language, Embedded Structures are a way to reuse a struct’s fields without having to inherit from it.
-https://www.geeksforgeeks.org/embedded-structures-in-golang/
-Promoted fields Fields that belong to an embedded struct can be accessed directly through the outer struct variable.</description>
-      <content:encoded><![CDATA[<p>En un intento por lograr que nuestros servicios sean más óptimos, performantes y veloces, con nuestro equipo en Pomelo decidimos comenzar a implentar Go en algunos de los microservicios dentro de nuestra arquitectura.</p>
-<p>¿Por que Go</p>
-<hr>
-<h1 id="composing-structs-embedded-structures-in-golang">(Composing Structs) Embedded Structures in Golang</h1>
-<p>In the Go programming language, Embedded Structures are a way to reuse a struct’s fields without having to inherit from it.</p>
-<p><a href="https://www.geeksforgeeks.org/embedded-structures-in-golang/">https://www.geeksforgeeks.org/embedded-structures-in-golang/</a></p>
-<p>Promoted fields
-Fields that belong to an embedded struct can be accessed directly through the outer struct variable. So, we can say that the fields of the embedded struct are promoted to the outer struct, and thus they are called the promoted fields.</p>
-<hr>
-<h1 id="why-they-say-that-go-is-cheaper-than-other-languages-like-java">Why they say that Go is &ldquo;cheaper&rdquo; than other languages like Java?</h1>
-<ul>
-<li>
-<p>Compilation Speed: Go&rsquo;s fast compilation times mean that developers can iterate and test their code rapidly. This speed of compilation can lead to shorter development cycles and reduce the cost of development.</p>
-</li>
-<li>
-<p>Scalability: Go is known for its efficiency in handling concurrent tasks, thanks to goroutines and channels. This efficiency allows developers to build scalable applications that can handle high levels of concurrency without the need for extensive hardware resources. This scalability can translate into cost savings by optimizing server and infrastructure costs.</p>
-</li>
-<li>
-<p>Efficiency: Go&rsquo;s runtime performance is often comparable to or better than languages like Java. Efficient code execution can lead to cost savings in terms of hardware and cloud computing resources, as less computing power is needed to achieve the same results.</p>
-</li>
-</ul>
-<hr>
-<p>Go is not (a traditional) object-oriented language</p>
-<p><a href="https://chat.openai.com/share/cbe5cd1d-53cd-41f7-abb7-a05f382af10c">https://chat.openai.com/share/cbe5cd1d-53cd-41f7-abb7-a05f382af10c</a></p>
-<p><a href="https://medium.com/@yesnandam/why-golang-choose-composition-as-its-base-rather-than-inheritance-1225d22a4798">https://medium.com/@yesnandam/why-golang-choose-composition-as-its-base-rather-than-inheritance-1225d22a4798</a>
-<a href="https://medium.com/geekculture/why-golang-is-a-better-choice-for-your-next-project-8d042a77a30f">https://medium.com/geekculture/why-golang-is-a-better-choice-for-your-next-project-8d042a77a30f</a>
-<a href="https://www.bairesdev.com/blog/why-golang-is-so-fast-performance-analysis/">https://www.bairesdev.com/blog/why-golang-is-so-fast-performance-analysis/</a></p>
-<hr>
-<ul>
-<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">The Art of Enbugging, Andy Hunt and Dave Thomas (2003)</a>.</em></li>
-</ul>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Preparatory Refactoring</title>
-      <link>https://lmitelman.github.io/posts/preparatory-refactoring/</link>
-      <pubDate>Tue, 24 Oct 2023 10:33:12 -0300</pubDate>
-      
-      <guid>https://lmitelman.github.io/posts/preparatory-refactoring/</guid>
-      <description>https://martinfowler.com/articles/preparatory-refactoring-example.html https://brewhouse.io/blog/2014/11/10/healthy-codebase-and-preparatory-refactoring.html
-The Art of Enbugging, Andy Hunt and Dave Thomas (2003). </description>
-      <content:encoded><![CDATA[<p><a href="https://martinfowler.com/articles/preparatory-refactoring-example.html">https://martinfowler.com/articles/preparatory-refactoring-example.html</a>
-<a href="https://brewhouse.io/blog/2014/11/10/healthy-codebase-and-preparatory-refactoring.html">https://brewhouse.io/blog/2014/11/10/healthy-codebase-and-preparatory-refactoring.html</a></p>
-<hr>
-<ul>
-<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">The Art of Enbugging, Andy Hunt and Dave Thomas (2003)</a>.</em></li>
-</ul>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tell-Don’t-Ask</title>
       <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
