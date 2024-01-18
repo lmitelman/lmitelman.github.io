@@ -2,6 +2,7 @@
 title: "Tell-Don’t-Ask"
 date: 2022-05-08T21:33:12-03:00
 draft: false
+categories: [ Software Engineering ]
 ---
 
 A few weeks ago, one of the best engineers on my team made an important comment in a pull request:

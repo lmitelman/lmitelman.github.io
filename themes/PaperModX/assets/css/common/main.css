@@ -219,7 +219,7 @@ pre:hover .copy-code {
     content: ",";
 }
 .meta-item .post-tags a:before {
-    content: "#";
+    content: "";
 }
 
 

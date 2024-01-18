@@ -14,9 +14,9 @@
     box-shadow: var(--link-hover-underline-shadow);
 }
 
-/* .post-entry:active {
+.post-entry:active {
     transform: scale(0.97);
-} */
+}
 
 .tag-entry .entry-cover {
     display: none;
