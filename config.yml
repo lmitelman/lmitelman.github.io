@@ -1,5 +1,5 @@
 baseURL: 'https://lmitelman.github.io/'
-title: 'lmitelman.com'
+title: 'lautaromitelman.com'
 theme: "PaperModX"
 
 publishDir: "docs"
@@ -58,7 +58,7 @@ params:
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowToc: true
+  # ShowToc: true
   # comments: false
   # images: ["papermod-cover.png"]
 
@@ -81,7 +81,7 @@ params:
       <span style="font-size: 1rem">_"Standing on the shoulders of giants."_</span>
       <br/>
       <br/>
-      <sub> 💭 Non-technical articles at [<ins>lmitelman.medium.com</ins>](https://lmitelman.medium.com/)!
+      <sub> 💭 My thoughts on non-tech topics at [<ins>lmitelman.medium.com</ins>](https://lmitelman.medium.com/)!
 
   socialIcons:
     - name: github

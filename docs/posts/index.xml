@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on lmitelman.com</title>
+    <title>Posts on lautaromitelman.com</title>
     <link>https://lmitelman.github.io/posts/</link>
-    <description>Recent content in Posts on lmitelman.com</description>
+    <description>Recent content in Posts on lautaromitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 08 May 2022 21:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,15 +12,11 @@
       <pubDate>Sun, 08 May 2022 21:33:12 -0300</pubDate>
       
       <guid>https://lmitelman.github.io/posts/tell-dont-ask/</guid>
-      <description>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:
-&amp;ldquo;Remember not to break the Tell-Don&amp;rsquo;t-Ask principle.&amp;rdquo;
-— The great Fer.
-Let&amp;rsquo;s delve into this concept a bit&amp;hellip;
-In object-oriented software, a typical use case involves executing logic based on an object&amp;rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</description>
+      <description>Elevating object-oriented practices through a simple and smarter design principle.</description>
       <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:</p>
 <blockquote>
-<p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
-<p>— The great <a href="https://github.com/hack2024">Fer</a>.</p>
+<p>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</p>
+<p>— <a href="https://github.com/hack2024">Fernando Balmaceda</a>, the great.</p>
 </blockquote>
 <p>Let&rsquo;s delve into this concept a bit&hellip;</p>
 <p>In object-oriented software, a typical use case involves executing logic based on an object&rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</p>
@@ -81,8 +77,13 @@ In object-oriented software, a typical use case involves executing logic based o
 </span></span><span class="line"><span class="cl"><span class="nx">thermometer</span><span class="p">.</span><span class="nx">increaseTemperature</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
 </span></span></code></pre></div><p>To summarize, it is acceptable to &ldquo;ask&rdquo; for the state of an object and then execute certain logic based on that information. However, if that logic is inherently related to the object, it should be moved and become the responsibility of the object itself. By adhering to the Tell-Don&rsquo;t-Ask principle, we can create more maintainable and object-oriented code.</p>
 <hr>
+<h5 id="acknowledgements">Acknowledgements</h5>
+<span style="font-size:smaller;">
+I would like to extend my heartfelt thanks to <a href="https://github.com/hack2024">Fernando Balmaceda</a>, whose comment sparked the idea for this post. His contributions and mentorship have played a significant role in shaping my approach to software engineering.
+</span>
+<hr>
 <ul>
-<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">The Art of Enbugging, Andy Hunt and Dave Thomas (2003)</a>.</em></li>
+<li><em><a href="https://media.pragprog.com/articles/jan_03_enbug.pdf">&ldquo;The Art of Enbugging&rdquo; by Andy Hunt and Dave Thomas (2003)</a>.</em></li>
 </ul>
 ]]></content:encoded>
     </item>

@@ -2,14 +2,15 @@
 title: "Tell-Don’t-Ask"
 date: 2022-05-08T21:33:12-03:00
 draft: false
+description: "Elevating object-oriented practices through a simple and smarter design principle."
 categories: [ Software Engineering ]
 ---
 
 A few weeks ago, one of the best engineers on my team made an important comment in a pull request:
 
->  _"Remember not to break the Tell-Don't-Ask principle."_
+> "Remember not to break the Tell-Don't-Ask principle."
 >
-> — The great [Fer](https://github.com/hack2024).
+> — [Fernando Balmaceda](https://github.com/hack2024), the great.
 
 Let's delve into this concept a bit...
 
@@ -89,4 +90,13 @@ To summarize, it is acceptable to "ask" for the state of an object and then exec
 
 ---
 
-- *[The Art of Enbugging, Andy Hunt and Dave Thomas (2003)](https://media.pragprog.com/articles/jan_03_enbug.pdf).*
+##### Acknowledgements
+
+<span style="font-size:smaller;">
+I would like to extend my heartfelt thanks to <a href="https://github.com/hack2024">Fernando Balmaceda</a>, whose comment sparked the idea for this post. His contributions and mentorship have played a significant role in shaping my approach to software engineering.
+</span>
+
+
+---
+
+- *["The Art of Enbugging" by Andy Hunt and Dave Thomas (2003)](https://media.pragprog.com/articles/jan_03_enbug.pdf).*
