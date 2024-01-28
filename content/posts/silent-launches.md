@@ -7,30 +7,21 @@ categories: [ Software Engineering ]
 ShowToC: true
 ---
 
-This blog post recalls my personal experience at a company that had a digital wallet service, used by over 3 million people. 
+My experience at a company with a digital wallet service, used by over 3 million people, was a lesson in unexpected challenges. During my time there, my team and I created a new feature in high demand. Not expecting the overwhelming response at its launch, we faced a massive surge in traffic. Our tech infrastructure, unprepared for such a load, was overwhelmed and eventually collapsed.
 
-During my time there, my team and I were deeply involved in creating a new feature that was in high demand by our users. When we notified them about its launch, we didn't expect the overwhelming response it received.
-
-A huge number of users immediately tried the new feature, leading to an unexpected and massive surge in traffic. Our tech infrastructure, unprepared for such a load, was overwhelmed and eventually collapsed.
-
-After recounting this challenging experience, now let's look at some better ways to introduce new features without running into these problems using different strategies of **Gradual Rollouts**, a phased approach in engineering for releasing updates. It enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.
+Now, let's look at some better ways to introduce new features without encountering these problems. I will discuss different strategies of **Gradual Rollouts**, a phased approach in engineering for releasing updates. This enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.
 
 <p style="margin-top: 45px;"></p>
 
 ### Dark Launching
 
-Dark Launching is primarily a backend technique that involves introducing a new (or modified) feature, which is then activated for current users without their knowledge. This technique provides insights into how the feature would be behaving in production, without actually impacting users.
+Dark Launching is primarily a backend technique that involves introducing a new feature, which is then released for current users without their knowledge. This technique provides insights into how the feature would be behaving in production, without actually impacting users.
+
+We adjust the process to call the new feature as it would in production, doing all the work but without displaying any results, ensuring it remains invisible to users. Meanwhile, this allows test engineers to evaluate the new feature in a real-world setting without impacting the user experience.
 
 <img src="/images/dark-launching.png" alt="Dark Launching" style="width:90%; height:auto;">
 
-We adjust the flow to call _Feature_ 3 as it would in production, doing all the work but without displaying any results, so nobody can see that it's doing it.
-
-Dark launching enables test engineers to evaluate new features in a real-world setting without impacting users. This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions. Essentially, it offers a safer, more effective way to ensure new updates are ready for broader release.
-
-
-> 💡 <span style="color: #9B9C9D;">
-The concept of **Dark Launching** has evolved over time, leading to some confusion. Nowadays, it's often used interchangeably with the concept of **Canary Release**.
-</span>
+This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions. Essentially, it offers a safer, more effective way to ensure new updates are ready for broader release.
 
 <p style="margin-top: 45px;"></p>
 
@@ -46,6 +37,10 @@ This technique starts with the new version being deployed to a part of the infra
 The term is derived from an [old mining practice](https://www.smithsonianmag.com/smart-news/story-real-canary-coal-mine-180961570/), where miners took canaries into mines as an early warning system against toxic gases. Just as the canary would alert miners to danger, a canary release detects potential issues in a software update before it affects all users.
 
 In modern distributed systems, instead of using a router for this process, various strategies are employed. These include rolling out updates to specific geographic regions first or to specific user groups based on criteria like user behavior, device type, or membership tier. Load-based rollouts are another option, where the new version is deployed during off-peak hours or low-activity periods to minimize potential impact.
+
+> 💡 <span style="color: #9B9C9D;">
+The concepts of **Dark Launching** and **Canary Release** have evolved over time, leading to some confusion. Nowadays, they are often used interchangeably, but it's important to note that they are not the same.
+</span>
 
 #### Feature Toggles
 
@@ -75,16 +70,8 @@ A replica of the production environment is created to mimic real user traffic. T
 | Gradual&nbsp;Rollout&nbsp;Strategy   | Description |
 | ------------------------------- | ----------- |
 | **Dark Launching**              | Deploying a feature in production without making it visible to users. The functionality is _dark_ to users, but can be selectively enabled for testing purposes. |
-| **Canary Release**              | Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of **Feature Toggles**    |
+| **Canary Release**              | Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of **Feature Toggles**.    |
 | **Shadow Testing**              | Duplicating real traffic to a parallel new service version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions. |
-
-
-<p style="margin-top: 45px;"></p>
-
----
-
-<h1 style="font-size: smaller; margin-top: 24px;">Acknowledgements</h1>
-
 
 ---
 

@@ -13,21 +13,14 @@
       
       <guid>https://lmitelman.github.io/posts/silent-launches/</guid>
       <description>Personal lessons from the trenches about my experience with gradual rollouts of features.</description>
-      <content:encoded><![CDATA[<p>This blog post recalls my personal experience at a company that had a digital wallet service, used by over 3 million people.</p>
-<p>During my time there, my team and I were deeply involved in creating a new feature that was in high demand by our users. When we notified them about its launch, we didn&rsquo;t expect the overwhelming response it received.</p>
-<p>A huge number of users immediately tried the new feature, leading to an unexpected and massive surge in traffic. Our tech infrastructure, unprepared for such a load, was overwhelmed and eventually collapsed.</p>
-<p>After recounting this challenging experience, now let&rsquo;s look at some better ways to introduce new features without running into these problems using different strategies of <strong>Gradual Rollouts</strong>, a phased approach in engineering for releasing updates. It enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.</p>
+      <content:encoded><![CDATA[<p>My experience at a company with a digital wallet service, used by over 3 million people, was a lesson in unexpected challenges. During my time there, my team and I created a new feature in high demand. Not expecting the overwhelming response at its launch, we faced a massive surge in traffic. Our tech infrastructure, unprepared for such a load, was overwhelmed and eventually collapsed.</p>
+<p>Now, let&rsquo;s look at some better ways to introduce new features without encountering these problems. I will discuss different strategies of <strong>Gradual Rollouts</strong>, a phased approach in engineering for releasing updates. This enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="dark-launching">Dark Launching</h3>
-<p>Dark Launching is primarily a backend technique that involves introducing a new (or modified) feature, which is then activated for current users without their knowledge. This technique provides insights into how the feature would be behaving in production, without actually impacting users.</p>
+<p>Dark Launching is primarily a backend technique that involves introducing a new feature, which is then released for current users without their knowledge. This technique provides insights into how the feature would be behaving in production, without actually impacting users.</p>
+<p>We adjust the process to call the new feature as it would in production, doing all the work but without displaying any results, ensuring it remains invisible to users. Meanwhile, this allows test engineers to evaluate the new feature in a real-world setting without impacting the user experience.</p>
 <img src="/images/dark-launching.png" alt="Dark Launching" style="width:90%; height:auto;">
-<p>We adjust the flow to call <em>Feature</em> 3 as it would in production, doing all the work but without displaying any results, so nobody can see that it&rsquo;s doing it.</p>
-<p>Dark launching enables test engineers to evaluate new features in a real-world setting without impacting users. This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions. Essentially, it offers a safer, more effective way to ensure new updates are ready for broader release.</p>
-<blockquote>
-<p>💡 <span style="color: #9B9C9D;">
-The concept of <strong>Dark Launching</strong> has evolved over time, leading to some confusion. Nowadays, it&rsquo;s often used interchangeably with the concept of <strong>Canary Release</strong>.
-</span></p>
-</blockquote>
+<p>This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions. Essentially, it offers a safer, more effective way to ensure new updates are ready for broader release.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="canary-release">Canary Release</h3>
 <p>Canary Release is a method used to minimize the risk of deploying new versions by initially introducing the update to a small group of users. This approach involves gradually extending the update across the entire system.</p>
@@ -36,6 +29,11 @@ The concept of <strong>Dark Launching</strong> has evolved over time, leading to
 <p style="margin-top: 30px;"></p>
 <p>The term is derived from an <a href="https://www.smithsonianmag.com/smart-news/story-real-canary-coal-mine-180961570/">old mining practice</a>, where miners took canaries into mines as an early warning system against toxic gases. Just as the canary would alert miners to danger, a canary release detects potential issues in a software update before it affects all users.</p>
 <p>In modern distributed systems, instead of using a router for this process, various strategies are employed. These include rolling out updates to specific geographic regions first or to specific user groups based on criteria like user behavior, device type, or membership tier. Load-based rollouts are another option, where the new version is deployed during off-peak hours or low-activity periods to minimize potential impact.</p>
+<blockquote>
+<p>💡 <span style="color: #9B9C9D;">
+The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</strong> have evolved over time, leading to some confusion. Nowadays, they are often used interchangeably, but it&rsquo;s important to note that they are not the same.
+</span></p>
+</blockquote>
 <h4 id="feature-toggles">Feature Toggles</h4>
 <p>Alongside the mentioned strategies for implementing Canary Releases, <strong>Feature Toggles</strong> enable the introduction of new features within the same environment. This method facilitates incremental rollouts to selected user groups, streamlining the release process and reducing the need for maintaining multiple environments or versions.</p>
 <img src="/images/feature-toggle.png" alt="Feature Toggles" style="width:80%; height:auto;">
@@ -65,7 +63,7 @@ The concept of <strong>Dark Launching</strong> has evolved over time, leading to
 </tr>
 <tr>
 <td><strong>Canary Release</strong></td>
-<td>Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of <strong>Feature Toggles</strong></td>
+<td>Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of <strong>Feature Toggles</strong>.</td>
 </tr>
 <tr>
 <td><strong>Shadow Testing</strong></td>
@@ -73,9 +71,6 @@ The concept of <strong>Dark Launching</strong> has evolved over time, leading to
 </tr>
 </tbody>
 </table>
-<p style="margin-top: 45px;"></p>
-<hr>
-<h1 style="font-size: smaller; margin-top: 24px;">Acknowledgements</h1>
 <hr>
 <ul>
 <li>
