@@ -1,4 +1,4 @@
-# lmitelman.com
+# lautaromitelman.com
 
 Build the static page based on `config.yml`:
 ```
