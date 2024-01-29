@@ -1,7 +1,7 @@
 ---
 title: "The Art of Silent Launches"
 date: 2024-01-26T15:33:12-03:00
-draft: false
+draft: true
 description: "Personal lessons from the trenches about my experience with gradual rollouts of features."
 categories: [ Software Engineering ]
 ShowToC: true
