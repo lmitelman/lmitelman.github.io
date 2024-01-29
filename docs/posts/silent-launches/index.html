@@ -55,7 +55,7 @@
   "keywords": [
     
   ],
-  "wordCount" : "775",
+  "wordCount" : "955",
   "inLanguage": "en",
   "datePublished": "2024-01-26T15:33:12-03:00",
   "dateModified": "2024-01-26T15:33:12-03:00",
@@ -188,14 +188,14 @@ function toggleThemeListener() {
 
 <article class="post-single">
   <header class="post-header">
-    <h1 class="post-title">The Art of Silent Launches<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup></h1>
+    <h1 class="post-title">The Art of Silent Launches</h1>
     <div class="post-description">Personal lessons from the trenches about my experience with gradual rollouts of features.</div>
     <div class="post-meta"><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
   <span>January 26, 2024</span></span><span class="meta-item">
   <span class="post-tags"><a href="https://lmitelman.github.io/categories/software-engineering/">Software Engineering</a></span></span><span class="meta-item">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
-  <span>4 min</span></span>
+  <span>5 min</span></span>
 
       
       
@@ -210,11 +210,7 @@ function toggleThemeListener() {
                 <li>
                     <a href="#dark-launching" aria-label="Dark Launching">Dark Launching</a></li>
                 <li>
-                    <a href="#canary-release" aria-label="Canary Release">Canary Release</a><ul>
-                        
-                <li>
-                    <a href="#feature-toggles" aria-label="Feature Toggles">Feature Toggles</a></li></ul>
-                </li>
+                    <a href="#canary-release" aria-label="Canary Release">Canary Release</a></li>
                 <li>
                     <a href="#shadow-testing" aria-label="Shadow Testing">Shadow Testing</a></li>
                 <li>
@@ -225,14 +221,15 @@ function toggleThemeListener() {
     </details>
 </div>
 
-  <div class="post-content"><p>My experience at a company with a digital wallet service, used by over 3 million people, was a lesson in unexpected challenges. During my time there, my team and I created a new feature in high demand. Not expecting the overwhelming response at its launch, we faced a massive surge in traffic. Our tech infrastructure, unprepared for such a load, was overwhelmed and eventually collapsed.</p>
+  <div class="post-content"><p>My experience at a company with a digital wallet service, used by over 3 million people, was a lesson in unexpected challenges. During my time there, my team and I developed a new feature that was eagerly anticipated by our users. We didn&rsquo;t anticipate the overwhelming response at its launch, which led to a massive surge in traffic. Our tech infrastructure, unprepared for such a load, was overwhelmed and eventually collapsed.</p>
 <p>Now, let&rsquo;s look at some better ways to introduce new features without encountering these problems. I will discuss different strategies of <strong>Gradual Rollouts</strong>, a phased approach in engineering for releasing updates. This enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="dark-launching">Dark Launching<a hidden class="anchor" aria-hidden="true" href="#dark-launching">¶</a></h3>
 <p>Dark Launching is primarily a backend technique that involves introducing a new feature, which is then released for current users without their knowledge. This technique provides insights into how the feature would be behaving in production, without actually impacting users.</p>
 <p>We adjust the process to call the new feature as it would in production, doing all the work but without displaying any results, ensuring it remains invisible to users. Meanwhile, this allows test engineers to evaluate the new feature in a real-world setting without impacting the user experience.</p>
 <img src="/images/dark-launching.png" alt="Dark Launching" style="width:90%; height:auto;">
-<p>This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions. Essentially, it offers a safer, more effective way to ensure new updates are ready for broader release.</p>
+<p>This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions. Dark launching is particularly effective for critical updates where precision is crucial and risks are high. Its strength lies in testing features discreetly, maintaining user experience while identifying potential issues early. However, it requires significant backend effort and may not capture real user reactions or feedback, as users are unaware of the changes being tested.
+Essentially, it offers a safer, more effective way to ensure new updates are ready for broader release.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="canary-release">Canary Release<a hidden class="anchor" aria-hidden="true" href="#canary-release">¶</a></h3>
 <p>Canary Release is a method used to minimize the risk of deploying new versions by initially introducing the update to a small group of users. This approach involves gradually extending the update across the entire system.</p>
@@ -240,14 +237,14 @@ function toggleThemeListener() {
 <img src="/images/canary-release.png" alt="Canary Release" style="width:90%; height:auto;">
 <p style="margin-top: 30px;"></p>
 <p>The term is derived from an <a href="https://www.smithsonianmag.com/smart-news/story-real-canary-coal-mine-180961570/">old mining practice</a>, where miners took canaries into mines as an early warning system against toxic gases. Just as the canary would alert miners to danger, a canary release detects potential issues in a software update before it affects all users.</p>
-<p>In modern distributed systems, instead of using a router for this process, various strategies are employed. These include rolling out updates to specific geographic regions first or to specific user groups based on criteria like user behavior, device type, or membership tier. Load-based rollouts are another option, where the new version is deployed during off-peak hours or low-activity periods to minimize potential impact.</p>
+<p>In modern distributed systems, instead of using a router for this process, various strategies are employed. These include rolling out updates to specific geographic regions first or to specific user groups based on criteria like user behavior, device type, or membership tier.</p>
+<p>Canary Release is particularly effective for applications requiring extensive user feedback where minimizing risk is crucial. The major advantage lies in its ability to detect issues early with minimal user impact. However, it demands meticulous monitoring and can lead to a slower overall release process.</p>
 <blockquote>
 <p>💡 <span style="color: #9B9C9D;">
 The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</strong> have evolved over time, leading to some confusion. Nowadays, they are often used interchangeably, but it&rsquo;s important to note that they are not the same.
 </span></p>
 </blockquote>
-<h4 id="feature-toggles">Feature Toggles<a hidden class="anchor" aria-hidden="true" href="#feature-toggles">¶</a></h4>
-<p>Alongside the mentioned strategies for implementing Canary Releases, <strong>Feature Toggles</strong> enable the introduction of new features within the same environment. This method facilitates incremental rollouts to selected user groups, streamlining the release process and reducing the need for maintaining multiple environments or versions.</p>
+<p>Alongside the mentioned strategies, <strong>Feature Toggles</strong> are essential in implementing Canary Releases. They enable the introduction of new features within the same production environment. This approach allows for incremental rollouts to these specific user groups, streamlining the release process and reducing the need for maintaining multiple environments.</p>
 <img src="/images/feature-toggle.png" alt="Feature Toggles" style="width:80%; height:auto;">
 <blockquote>
 <p>💡 <span style="color: #9B9C9D;"> <strong>Feature Toggle</strong> is also referred to as <strong>Feature Flag</strong> in some engineering contexts, highlighting its role in enabling and disabling certain features.
@@ -259,6 +256,7 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 <p>In shadow testing, we observe how real users interact with our system by examining their actual traffic, all without impacting the code or the experience of users in the production environment.</p>
 <img src="/images/shadow-testing.png" alt="Shadow Testing" style="width:150%; height:auto;">
 <p>A replica of the production environment is created to mimic real user traffic. This environment serves as a <em>shadow</em> of the production environment. The new feature is then tested in a different environment. After testing, the responses from both environments are compared by test engineers to identify any risks before introducing the new feature to the production environment.</p>
+<p>This technique is particularly convenient in scenarios where accurate performance assessment under real-world conditions is essential, without the risk of disrupting user experience. It’s ideal for systems that handle sensitive data or complex transactions, where unnoticed errors could lead to significant issues. The primary advantage of Shadow Testing is its ability to provide a realistic evaluation of new features, without affecting end users. However, it can be resource-intensive to set up and maintain a parallel environment, and it may not fully capture user experience aspects, since interactions are only simulated, not directly observed.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="tldr">TL;DR<a hidden class="anchor" aria-hidden="true" href="#tldr">¶</a></h3>
 <table>
