@@ -58,7 +58,6 @@ params:
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  goatcounter: lautaromitelman
   # ShowToc: true
   # comments: false
   # images: ["papermod-cover.png"]
