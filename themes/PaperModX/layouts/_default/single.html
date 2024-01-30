@@ -25,6 +25,9 @@
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
       {{/* TODO move to footer */}}
+      {{ if and (.Params.ShowPageViews | default (.Site.Params.ShowPageViews | default true)) }}
+        {{- partial "page_views.html" . -}}
+      {{ end }}
       {{/* partial "edit_post.html" . */}}
       {{/* partial "post_canonical.html" . */}}
     </div>

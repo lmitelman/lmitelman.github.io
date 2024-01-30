@@ -52,8 +52,6 @@ Alongside the mentioned strategies, **Feature Toggles** are essential in impleme
 > 💡 <span style="color: #9B9C9D;"> **Feature Toggle** is also referred to as **Feature Flag** in some engineering contexts, highlighting its role in enabling and disabling certain features.
 </span>
 
-
-
 <p style="margin-top: 45px;"></p>
 
 ### Shadow Testing
@@ -66,7 +64,9 @@ In shadow testing, we observe how real users interact with our system by examini
 
 A replica of the production environment is created to mimic real user traffic. This environment serves as a _shadow_ of the production environment. The new feature is then tested in a different environment. After testing, the responses from both environments are compared by test engineers to identify any risks before introducing the new feature to the production environment.
 
-This technique is particularly convenient in scenarios where accurate performance assessment under real-world conditions is essential, without the risk of disrupting user experience. It’s ideal for systems that handle sensitive data or complex transactions, where unnoticed errors could lead to significant issues. The primary advantage of Shadow Testing is its ability to provide a realistic evaluation of new features, without affecting end users. However, it can be resource-intensive to set up and maintain a parallel environment, and it may not fully capture user experience aspects, since interactions are only simulated, not directly observed.
+This technique is particularly convenient in scenarios where accurate performance assessment under real-world conditions is essential, without the risk of disrupting user experience. It’s ideal for systems that handle sensitive data or complex transactions, where unnoticed errors could lead to significant issues. 
+
+The primary advantage of Shadow Testing is its ability to provide a realistic evaluation of new features, without affecting end users. However, it can be resource-intensive to set up and maintain a parallel environment, and it may not fully capture user experience aspects, since interactions are only simulated, not directly observed.
 
 <p style="margin-top: 45px;"></p>
 
@@ -77,6 +77,15 @@ This technique is particularly convenient in scenarios where accurate performanc
 | **Dark Launching**              | Deploying a feature in production without making it visible to users. The functionality is _dark_ to users, but can be selectively enabled for testing purposes. |
 | **Canary Release**              | Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of **Feature Toggles**.    |
 | **Shadow Testing**              | Duplicating real traffic to a parallel new service version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions. |
+
+<p style="margin-top: 80px;"></p>
+
+---
+
+<h1 style="font-size: smaller; margin-top: 24px; margin-bottom: 16px;">Acknowledgements</h1>
+<span style="font-size:smaller;">
+With appreciation for the contributions of my dear friends and former colleagues, <a href="https://www.linkedin.com/in/bautista-coronado/" target="_blank">Bautista Coronado</a> and <a href="https://www.linkedin.com/in/mauro-maulini-50b02192/" target="_blank">Mauro Maulini</a>. Their valuable input and dedicated reviews were instrumental during the drafting process of this article.
+</span>
 
 ---
 
