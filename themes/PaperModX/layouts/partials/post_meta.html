@@ -48,6 +48,25 @@
   {{- partial "author.html" . -}}</span>
 {{- end }}
 
+<!-- Add this in your post template
+<div id="visit-count" data-path="{{ .RelPermalink }}">Visits: Loading...</div> -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var visitCountElement = document.getElementById('visit-count');
+      var path = visitCountElement.getAttribute('data-path');
+  
+      fetch(`https://lautaromitelman.goatcounter.com/counter/${path}.json`)
+          .then(response => response.json())
+          .then(data => {
+              if (data && data.count) {
+                  visitCountElement.textContent = 'Visits: ' + data.count;
+              }
+              console.log(data.count)
+          })
+          .catch(error => console.error('Error fetching visit count:', error));
+  });
+  </script>
 
 {{- if .IsTranslated -}}
 <span class="meta-item">

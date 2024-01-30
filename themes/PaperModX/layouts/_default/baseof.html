@@ -18,6 +18,7 @@
     <main class="main {{- if (eq .Kind `page`) -}}{{- print " post" -}}{{- end -}}">
         {{- block "main" . }}{{ end }}
     </main>
+    <script data-goatcounter="https://lautaromitelman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     {{ partial "footer.html" . -}}
     {{- block "body_end" . }}{{ end }}
 </body>
