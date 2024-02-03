@@ -13,17 +13,17 @@
       
       <guid>https://lmitelman.github.io/posts/silent-launches/</guid>
       <description>A dive into effective strategies for smoother feature rollouts.</description>
-      <content:encoded><![CDATA[<p>In 2020, I worked at a company that offered a digital wallet service, used by over 3 million users. During my time there, my team and I spent months developing a feature eagerly anticipated by our users. When we finally launched it, our tech infrastructure couldn&rsquo;t handle the sudden surge in traffic, and everything collapsed.</p>
+      <content:encoded><![CDATA[<p>In 2020, I was working at a company that offered a digital wallet service, used by over 3 million users. During my time there, my team and I spent months developing a feature eagerly anticipated by our users. When we finally launched it, our tech infrastructure couldn&rsquo;t handle the massive surge in traffic&hellip; and eventually collapsed.</p>
 <p>We learned a lesson the hard way: <strong>&ldquo;New features have to be released gradually&rdquo;</strong>.</p>
 <p>In this article, I&rsquo;ll break down different strategies of what&rsquo;s called <strong>Gradual Rollouts</strong>, which we used for the following features we launched. This is a phased approach in engineering for releasing updates that enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="dark-launching">Dark Launching</h3>
 <p>Dark Launching is a backend technique that involves introducing a new feature, which is then released to current users without their knowledge. This technique provides insights into how the feature would behave in production without actually impacting users.</p>
 <p>In the dark launching process, we modify our systems to run the new feature in the background, without showing any changes to users. This involves executing all its functions, data processing and system interactions silently.</p>
-<p>Meanwhile, this allows test engineers to evaluate the new feature performance in a real-world setting without impacting the user experience.</p>
+<p>Meanwhile, this allows test engineers to evaluate the new feature performance in a real-world setting, without impacting the user experience.</p>
 <p style="margin-top: 30px;"></p>
 <img src="/images/silent-launches/dark-launching.png" alt="Dark Launching" style="width:90%; height:auto;">
-<p>This process allows for performance testing, issue detection, infrastructure scaling assessments and stress testing under actual traffic conditions while keeping it hidden from users.</p>
+<p>This process allows for performance testing, issue detection, infrastructure scaling analysis and stress testing under actual traffic conditions, while keeping it hidden from users.</p>
 <p>Dark launching is particularly effective for critical updates where precision is crucial and risks are high. Its strength lies in testing features discreetly, maintaining user experience while identifying potential issues early. However, it requires significant backend effort and may not capture real user reactions or feedback, as users are unaware of the changes being tested.</p>
 <p style="margin-top: 45px;"></p>
 <h3 id="canary-release">Canary Release</h3>
@@ -49,12 +49,12 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 </blockquote>
 <p style="margin-top: 45px;"></p>
 <h3 id="shadow-testing">Shadow Testing</h3>
-<p>Shadow testing is a technique used to compare the current environment with a new one that includes a new feature. Its purpose is to identify and reduce potential risks before releasing the new feature to users, all without users ever knowing it&rsquo;s happening.</p>
-<p>In shadow testing, we observe how real users interact with our system by examining their actual traffic, all without impacting the code or the experience of users in the production environment.</p>
+<p>Shadow testing is a technique used to compare the performance of a new feature within a <em>shadow environment</em>, a replica of the current production environment. The primary goal is to identify and mitigate potential risks associated with the new feature before it&rsquo;s released to users, ensuring the process remains invisible to them.</p>
+<p>A shadow environment is created to precisely mimic real user traffic and interactions as they occur in the production environment. The new feature is deployed within this shadow environment, allowing it to operate alongside the production environment without affecting real users.</p>
+<p>Test engineers then analyze the behavior and responses of the new feature in the shadow environment in comparison with the production environment, to detect any discrepancies, performance issues, or risks. This thorough evaluation ensures that any potential problems are addressed before the new feature is officially introduced to the production environment.</p>
 <p style="margin-top: 30px;"></p>
 <img src="/images/silent-launches/shadow-testing.png" alt="Shadow Testing" style="width:150%; height:auto;">
 <p style="margin-top: 30px;"></p>
-<p>A replica of the production environment is created to mimic real user traffic. This environment serves as a <em>shadow</em> of the production environment. The new feature is then tested in a different environment. After testing, the responses from both environments are compared by test engineers to identify any risks before introducing the new feature to the production environment.</p>
 <p>This technique is particularly convenient in scenarios where accurate performance assessment under real-world conditions is essential, without the risk of disrupting user experience. It’s ideal for systems that handle sensitive data or complex transactions, where unnoticed errors could lead to significant issues.</p>
 <p>The primary advantage of Shadow Testing is its ability to provide a realistic evaluation of new features, without affecting end users. However, it can be resource-intensive to set up and maintain a parallel environment, and it may not fully capture user experience aspects, since interactions are only simulated, not directly observed.</p>
 <p style="margin-top: 45px;"></p>
@@ -77,7 +77,7 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 </tr>
 <tr>
 <td><strong>Shadow Testing</strong></td>
-<td>Duplicating real traffic to a parallel new service version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions.</td>
+<td>Duplicating real traffic to a parallel (<em>shadow</em>) new environment version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions.</td>
 </tr>
 </tbody>
 </table>
