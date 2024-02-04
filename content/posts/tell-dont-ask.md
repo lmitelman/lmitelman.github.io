@@ -8,7 +8,7 @@ categories: [ Software Engineering ]
 
 A few weeks ago, one of the best engineers on my team made an important comment in a pull request:
 
-> "Remember not to break the Tell-Don't-Ask principle."
+> _"Remember not to break the Tell-Don't-Ask principle."_
 >
 > — [Fernando Balmaceda](https://github.com/hack2024), the great.
 

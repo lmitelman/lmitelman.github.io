@@ -5,11 +5,11 @@
     <link>https://lmitelman.github.io/posts/</link>
     <description>Recent content in Posts on lautaromitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 03 Feb 2024 08:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Feb 2024 08:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Art of Silent Launches</title>
       <link>https://lmitelman.github.io/posts/silent-launches/</link>
-      <pubDate>Sat, 03 Feb 2024 08:33:12 -0300</pubDate>
+      <pubDate>Sun, 04 Feb 2024 08:33:12 -0300</pubDate>
       
       <guid>https://lmitelman.github.io/posts/silent-launches/</guid>
       <description>A dive into effective strategies for smoother feature rollouts.</description>
@@ -81,7 +81,13 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 </tr>
 </tbody>
 </table>
-<p style="margin-top: 80px;"></p>
+<p>To conclude, each strategy offers different benefits, but choosing the one that matches your project&rsquo;s needs is crucial. Dive deep into these strategies to pick the right one, ensuring a smooth rollout of new features to your users. <strong>The best strategy is the one that fits your specific situation and improves the user experience</strong>.</p>
+<p style="margin-top: 35px;"></p>
+<blockquote>
+<p><em>“There are no solutions. There are only trade-offs.”</em></p>
+<p>— <a href="https://www.tsowell.com/">Thomas Sowell</a>.</p>
+</blockquote>
+<p style="margin-top: 50px;"></p>
 <hr>
 <h1 style="font-size: smaller; margin-top: 24px; margin-bottom: 16px;">Acknowledgements</h1>
 <span style="font-size:smaller;">
@@ -108,7 +114,7 @@ With deep gratitude, I would like to highlight the significant contributions of 
       <description>Elevating object-oriented practices through a simple and smarter design principle.</description>
       <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:</p>
 <blockquote>
-<p>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</p>
+<p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
 <p>— <a href="https://github.com/hack2024">Fernando Balmaceda</a>, the great.</p>
 </blockquote>
 <p>Let&rsquo;s delve into this concept a bit&hellip;</p>

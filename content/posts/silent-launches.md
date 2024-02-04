@@ -1,6 +1,6 @@
 ---
 title: "The Art of Silent Launches"
-date: 2024-02-03T08:33:12-03:00
+date: 2024-02-04T08:33:12-03:00
 draft: false
 description: "A dive into effective strategies for smoother feature rollouts."
 categories: [ Software Engineering ]
@@ -88,7 +88,15 @@ The primary advantage of Shadow Testing is its ability to provide a realistic ev
 | **Canary Release**              | Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of **Feature Toggles**.    |
 | **Shadow Testing**              | Duplicating real traffic to a parallel (_shadow_) new environment version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions. |
 
-<p style="margin-top: 80px;"></p>
+To conclude, each strategy offers different benefits, but choosing the one that matches your project's needs is crucial. Dive deep into these strategies to pick the right one, ensuring a smooth rollout of new features to your users. **The best strategy is the one that fits your specific situation and improves the user experience**.
+
+<p style="margin-top: 35px;"></p>
+
+> _“There are no solutions. There are only trade-offs.”_
+>
+> — [Thomas Sowell](https://www.tsowell.com/).
+
+<p style="margin-top: 50px;"></p>
 
 ---
 
