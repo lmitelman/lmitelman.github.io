@@ -12,7 +12,7 @@
       <pubDate>Sun, 04 Feb 2024 08:33:12 -0300</pubDate>
       
       <guid>https://lmitelman.github.io/posts/silent-launches/</guid>
-      <description>A dive into effective strategies for smoother feature rollouts.</description>
+      <description>A dive into effective strategies for gradual feature rollouts.</description>
       <content:encoded><![CDATA[<p>In 2020, I was working at a company that offered a digital wallet service, used by over 3 million users. During my time there, my team and I spent months developing a feature eagerly anticipated by our users. When we finally launched it, our tech infrastructure couldn&rsquo;t handle the massive surge in traffic&hellip; and eventually collapsed.</p>
 <p>We learned a lesson the hard way: <strong>&ldquo;New features have to be released gradually&rdquo;</strong>.</p>
 <p>In this article, I&rsquo;ll break down different strategies of what&rsquo;s called <strong>Gradual Rollouts</strong>, which we used for the following features we launched. This is a phased approach in engineering for releasing updates that enables testing stability and performance with a limited audience, identifying issues with minimal overall user impact.</p>
@@ -81,7 +81,7 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 </tr>
 </tbody>
 </table>
-<p style="margin-top: 50px;"></p>
+<p style="margin-top: 70px;"></p>
 <hr>
 <h1 style="font-size: smaller; margin-top: 24px; margin-bottom: 16px;">Acknowledgements</h1>
 <span style="font-size:smaller;">
