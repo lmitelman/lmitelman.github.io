@@ -62,18 +62,22 @@ params:
   # comments: false
   # images: ["papermod-cover.png"]
 
-  # profileMode:
-  #   enabled: false
-  #   title: Lautaro Mitelman
-  #   imageUrl: "#"
-  #   imageTitle: my image
-  #   # imageWidth: 120
-  #   # imageHeight: 120
-  #   buttons:
-  #     - name: Archives
-  #       url: archives
-  #     - name: Tags
-  #       url: tags
+  profileMode:
+    enabled: true
+    title: Lautaro Mitelman
+    subtitle: >
+      <span style="font-size: 1rem">_"Standing on the shoulders of giants."_</span>
+      <br/>
+      <br/>
+    imageUrl: "https://pbs.twimg.com/profile_images/1753944048832839680/Kr5piXwc_400x400.jpg"
+    imageTitle: " "
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Categories
+        url: categories
 
   homeInfoParams:
     Title: "Lautaro Mitelman"
@@ -81,15 +85,17 @@ params:
       <span style="font-size: 1rem">_"Standing on the shoulders of giants."_</span>
       <br/>
       <br/>
-      <sub> 💭 My thoughts on non-tech topics at [<ins>lmitelman.medium.com</ins>](https://lmitelman.medium.com/)!
 
   socialIcons:
-    - name: github
-      url: "https://github.com/lmitelman"
+    - name: medium
+      url: "https://lmitelman.medium.com/"
     - name: twitter
       url: "https://twitter.com/LautaroMitelman"
-    - name: Linkedin
+    - name: linkedin
       url: "https://www.linkedin.com/in/lmitelman/"
+    - name: github
+      url: "https://github.com/lmitelman"
+
 
   #editPost:
     #URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
