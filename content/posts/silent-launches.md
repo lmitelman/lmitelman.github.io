@@ -1,5 +1,5 @@
 ---
-title: "The Art of Silent Launches"
+title: "Silent Launches"
 date: 2024-02-07T03:33:12-03:00
 draft: false
 description: "A dive into effective strategies for gradual feature rollouts."
