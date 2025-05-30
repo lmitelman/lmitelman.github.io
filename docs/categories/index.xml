@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on lautaromitelman.com</title>
-    <link>https://lmitelman.github.io/categories/</link>
+    <link>https://lautaromitelman.com/categories/</link>
     <description>Recent content in Categories on lautaromitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Feb 2024 03:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Feb 2024 03:33:12 -0300</lastBuildDate><atom:link href="https://lautaromitelman.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Software Engineering</title>
-      <link>https://lmitelman.github.io/categories/software-engineering/</link>
+      <link>https://lautaromitelman.com/categories/software-engineering/</link>
       <pubDate>Wed, 07 Feb 2024 03:33:12 -0300</pubDate>
       
-      <guid>https://lmitelman.github.io/categories/software-engineering/</guid>
+      <guid>https://lautaromitelman.com/categories/software-engineering/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on lautaromitelman.com</title>
-    <link>https://lmitelman.github.io/posts/</link>
+    <link>https://lautaromitelman.com/posts/</link>
     <description>Recent content in Posts on lautaromitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Feb 2024 03:33:12 -0300</lastBuildDate><atom:link href="https://lmitelman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Feb 2024 03:33:12 -0300</lastBuildDate><atom:link href="https://lautaromitelman.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Art of Gradual Rollouts</title>
-      <link>https://lmitelman.github.io/posts/silent-launches/</link>
+      <link>https://lautaromitelman.com/posts/silent-launches/</link>
       <pubDate>Wed, 07 Feb 2024 03:33:12 -0300</pubDate>
       
-      <guid>https://lmitelman.github.io/posts/silent-launches/</guid>
+      <guid>https://lautaromitelman.com/posts/silent-launches/</guid>
       <description>A dive into effective strategies for gradual feature rollouts.</description>
       <content:encoded><![CDATA[<p>In 2020, I was working at a company that offered a digital wallet service, used by over 3 million users. During my time there, my team and I spent months developing a feature eagerly anticipated by our users. When we finally launched it, our tech infrastructure couldn&rsquo;t handle the massive surge in traffic&hellip; and eventually collapsed.</p>
 <p>We learned a lesson the hard way: <strong>&ldquo;New features have to be released gradually&rdquo;</strong>.</p>
@@ -101,10 +101,10 @@ With deep gratitude, I would like to highlight the significant contributions of 
     
     <item>
       <title>Tell-Don’t-Ask</title>
-      <link>https://lmitelman.github.io/posts/tell-dont-ask/</link>
+      <link>https://lautaromitelman.com/posts/tell-dont-ask/</link>
       <pubDate>Sun, 08 May 2022 21:33:12 -0300</pubDate>
       
-      <guid>https://lmitelman.github.io/posts/tell-dont-ask/</guid>
+      <guid>https://lautaromitelman.com/posts/tell-dont-ask/</guid>
       <description>Elevating object-oriented practices through a simple and smarter design principle.</description>
       <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:</p>
 <blockquote>

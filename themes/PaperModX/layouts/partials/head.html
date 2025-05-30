@@ -82,20 +82,6 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started */}}
-<meta name="twitter:image" content=https://lautaromitelman.com/static/images/gg.jpeg />
-<meta name="twitter:card" property="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ $pageTitle }}" />
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />
-{{- with site.Params.socialAccounts.twitter }}
-  <meta name="twitter:site" content="@{{ .username }}" />
-  <meta name="twitter:creator" content="@{{ .username }}" />
-{{- end }}
-
-{{- template "partials/templates/opengraph.html" (dict "page" . "pageTitle" $pageTitle) }}
-
-{{- template "partials/templates/schema_json.html" (dict "page" . "pageTitle" $pageTitle) }}
-
 {{- partial "extend_head.html" . }}
 <noscript>
     <style>
