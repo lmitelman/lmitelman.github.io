@@ -3,11 +3,21 @@
 
 <head>
     {{- partial "head.html" . }}
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}{{ .Summary | default (printf "%s - %s" .Title  site.Title) }}{{- else }}{{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}images/thumbnail.jpg">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LautaroMitelman">
+    <meta name="twitter:creator" content="@LautaroMitelman">
     <meta name="twitter:title" content="{{ .Title }}">
     <meta name="twitter:description" content="{{ .Params.description }}">
-    <meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/thumbnail.jpg">
     {{- block "head" . }}{{ end }}
 </head>
 
