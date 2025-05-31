@@ -3,11 +3,20 @@
 
 <head>
     {{- partial "head.html" . }}
+    <!-- Social Media Cards -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Params.description }}">
+    <meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Title }}">
     <meta name="twitter:description" content="{{ .Params.description }}">
     <meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta name="twitter:creator" content="@LautaroMitelman">
     {{- block "head" . }}{{ end }}
 </head>
 
