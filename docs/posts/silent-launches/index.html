@@ -15,17 +15,18 @@
 <meta property="og:description" content="A dive into effective strategies for gradual feature rollouts.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lautaromitelman.com/posts/silent-launches/">
-<meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+<meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.png">
 <meta property="og:site_name" content="lautaromitelman.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LautaroMitelman">
 <meta name="twitter:creator" content="@LautaroMitelman">
 <meta name="twitter:title" content="The Art of Gradual Rollouts">
 <meta name="twitter:description" content="A dive into effective strategies for gradual feature rollouts.">
-<meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.324caf84a4f9665cfb62b27ad41d10934ca1e436be3c3f9c5384bc2ae69f71cc.css" integrity="sha256-MkyvhKT5Zlz7YrJ61B0Qk0yh5Da&#43;PD&#43;cU4S8Kuafccw=" rel="preload stylesheet" as="style">
+<meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.png">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.4d7b8936bfae5377a2e43724099a8ff6940ab063c6e6ebf126f758c5961c08fc.css" integrity="sha256-TXuJNr&#43;uU3ei5DckCZqP9pQKsGPG5uvxJvdYxZYcCPw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lautaromitelman.com/favicon.ico">
 <link rel="apple-touch-icon" href="https://lautaromitelman.com/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://lautaromitelman.com/posts/silent-launches/">
 
 <noscript>
     <style>
@@ -42,7 +43,7 @@
     <meta property="og:description" content="A dive into effective strategies for gradual feature rollouts.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://lautaromitelman.com/posts/silent-launches/">
-    <meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.png">
     <meta property="og:site_name" content="lautaromitelman.com">
 
     
@@ -51,7 +52,7 @@
     <meta name="twitter:creator" content="@LautaroMitelman">
     <meta name="twitter:title" content="The Art of Gradual Rollouts">
     <meta name="twitter:description" content="A dive into effective strategies for gradual feature rollouts.">
-    <meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.png">
 </head>
 
 <body class=" dark type-posts kind-page layout-" id="top"><script data-no-instant>
@@ -228,15 +229,13 @@ function toggleThemeListener() {
 <blockquote>
 <p>💡 <span style="color: #9B9C9D;">
 The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</strong> have evolved over time, leading to some confusion. Nowadays, they are often used interchangeably, but it&rsquo;s important to note that they are not the same.
-</span></p>
-</blockquote>
+</span></p></blockquote>
 <p>Alongside the mentioned strategies, <strong>Feature Toggles</strong> are essential in implementing Canary Releases. They enable the introduction of new features within the same production environment. This approach allows for incremental rollouts to these specific user groups, streamlining the release process and reducing the need for maintaining multiple environments.</p>
 <p style="margin-top: 30px;"></p>
 <img src="/images/silent-launches/feature-toggle.png" alt="Feature Toggles" style="width:80%; height:auto;">
 <blockquote>
 <p>💡 <span style="color: #9B9C9D;"> <strong>Feature Toggle</strong> is also referred to as <strong>Feature Flag</strong> in some engineering contexts, highlighting its role in enabling and disabling certain features.
-</span></p>
-</blockquote>
+</span></p></blockquote>
 <p style="margin-top: 45px;"></p>
 <h3 id="shadow-testing">Shadow Testing<a hidden class="anchor" aria-hidden="true" href="#shadow-testing">¶</a></h3>
 <p>Shadow testing is a technique used to compare the performance of a new feature within a <em>shadow environment</em>, a replica of the current production environment. The primary goal is to identify and mitigate potential risks associated with the new feature before it&rsquo;s released to users, ensuring the process remains invisible to them.</p>
@@ -250,26 +249,26 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 <p style="margin-top: 45px;"></p>
 <h3 id="tldr">TL;DR<a hidden class="anchor" aria-hidden="true" href="#tldr">¶</a></h3>
 <table>
-<thead>
-<tr>
-<th>Gradual Rollout Strategy</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Dark Launching</strong></td>
-<td>Deploying a feature in production without making it visible to users. The functionality is <em>dark</em> to users, but can be selectively enabled for testing purposes.</td>
-</tr>
-<tr>
-<td><strong>Canary Release</strong></td>
-<td>Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of <strong>Feature Toggles</strong>.</td>
-</tr>
-<tr>
-<td><strong>Shadow Testing</strong></td>
-<td>Duplicating real traffic to a parallel (<em>shadow</em>) new environment version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Gradual Rollout Strategy</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Dark Launching</strong></td>
+          <td>Deploying a feature in production without making it visible to users. The functionality is <em>dark</em> to users, but can be selectively enabled for testing purposes.</td>
+      </tr>
+      <tr>
+          <td><strong>Canary Release</strong></td>
+          <td>Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of <strong>Feature Toggles</strong>.</td>
+      </tr>
+      <tr>
+          <td><strong>Shadow Testing</strong></td>
+          <td>Duplicating real traffic to a parallel (<em>shadow</em>) new environment version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions.</td>
+      </tr>
+  </tbody>
 </table>
 <p style="margin-top: 70px;"></p>
 <hr>

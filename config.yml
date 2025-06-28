@@ -167,3 +167,5 @@ services:
     disableInlineCSS: true
   twitter:
     disableInlineCSS: true
+  googleAnalytics:
+    id: ""  # Add your Google Analytics ID here if needed

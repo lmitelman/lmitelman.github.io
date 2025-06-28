@@ -5,6 +5,7 @@
     <link>https://lautaromitelman.com/categories/software-engineering/</link>
     <description>Recent content in Software Engineering on lautaromitelman.com</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 07 Feb 2024 03:33:12 -0300</lastBuildDate><atom:link href="https://lautaromitelman.com/categories/software-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Art of Gradual Rollouts</title>
@@ -38,15 +39,13 @@
 <blockquote>
 <p>💡 <span style="color: #9B9C9D;">
 The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</strong> have evolved over time, leading to some confusion. Nowadays, they are often used interchangeably, but it&rsquo;s important to note that they are not the same.
-</span></p>
-</blockquote>
+</span></p></blockquote>
 <p>Alongside the mentioned strategies, <strong>Feature Toggles</strong> are essential in implementing Canary Releases. They enable the introduction of new features within the same production environment. This approach allows for incremental rollouts to these specific user groups, streamlining the release process and reducing the need for maintaining multiple environments.</p>
 <p style="margin-top: 30px;"></p>
 <img src="/images/silent-launches/feature-toggle.png" alt="Feature Toggles" style="width:80%; height:auto;">
 <blockquote>
 <p>💡 <span style="color: #9B9C9D;"> <strong>Feature Toggle</strong> is also referred to as <strong>Feature Flag</strong> in some engineering contexts, highlighting its role in enabling and disabling certain features.
-</span></p>
-</blockquote>
+</span></p></blockquote>
 <p style="margin-top: 45px;"></p>
 <h3 id="shadow-testing">Shadow Testing</h3>
 <p>Shadow testing is a technique used to compare the performance of a new feature within a <em>shadow environment</em>, a replica of the current production environment. The primary goal is to identify and mitigate potential risks associated with the new feature before it&rsquo;s released to users, ensuring the process remains invisible to them.</p>
@@ -60,26 +59,26 @@ The concepts of <strong>Dark Launching</strong> and <strong>Canary Release</stro
 <p style="margin-top: 45px;"></p>
 <h3 id="tldr">TL;DR</h3>
 <table>
-<thead>
-<tr>
-<th>Gradual Rollout Strategy</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Dark Launching</strong></td>
-<td>Deploying a feature in production without making it visible to users. The functionality is <em>dark</em> to users, but can be selectively enabled for testing purposes.</td>
-</tr>
-<tr>
-<td><strong>Canary Release</strong></td>
-<td>Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of <strong>Feature Toggles</strong>.</td>
-</tr>
-<tr>
-<td><strong>Shadow Testing</strong></td>
-<td>Duplicating real traffic to a parallel (<em>shadow</em>) new environment version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Gradual Rollout Strategy</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Dark Launching</strong></td>
+          <td>Deploying a feature in production without making it visible to users. The functionality is <em>dark</em> to users, but can be selectively enabled for testing purposes.</td>
+      </tr>
+      <tr>
+          <td><strong>Canary Release</strong></td>
+          <td>Rolling out a new feature incrementally to a small subset of users before a full deployment, often implemented through the use of <strong>Feature Toggles</strong>.</td>
+      </tr>
+      <tr>
+          <td><strong>Shadow Testing</strong></td>
+          <td>Duplicating real traffic to a parallel (<em>shadow</em>) new environment version, which processes it without affecting or being noticed by users, allowing performance and stability testing under real conditions.</td>
+      </tr>
+  </tbody>
 </table>
 <p style="margin-top: 70px;"></p>
 <hr>
@@ -109,8 +108,7 @@ With deep gratitude, I would like to highlight the significant contributions of 
       <content:encoded><![CDATA[<p>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:</p>
 <blockquote>
 <p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
-<p>— <a href="https://github.com/hack2024">Fernando Balmaceda</a>, the great.</p>
-</blockquote>
+<p>— <a href="https://github.com/hack2024">Fernando Balmaceda</a>, the great.</p></blockquote>
 <p>Let&rsquo;s delve into this concept a bit&hellip;</p>
 <p>In object-oriented software, a typical use case involves executing logic based on an object&rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>
@@ -140,8 +138,7 @@ With deep gratitude, I would like to highlight the significant contributions of 
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>However, following the Tell-Don&rsquo;t-Ask principle suggests that the logic should reside within the object itself if it is related to that object. In other words, the thermometer should be responsible for sounding the alarm when it reaches a certain temperature. This promotes more object-oriented code as opposed to procedural code.</p>
 <blockquote>
-<p><strong>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</strong></p>
-</blockquote>
+<p><strong>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</strong></p></blockquote>
 <p>With this in mind, let&rsquo;s refactor our classes using a &ldquo;telling&rdquo; approach:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">temperature</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>

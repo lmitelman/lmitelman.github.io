@@ -45,7 +45,7 @@
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}images/thumbnail.jpg">
+<meta property="og:image" content="{{ .Site.BaseURL }}images/thumbnail.png">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 
 {{- /* Twitter Card */}}
@@ -54,7 +54,7 @@
 <meta name="twitter:creator" content="@LautaroMitelman">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ $description }}">
-<meta name="twitter:image" content="{{ .Site.BaseURL }}images/thumbnail.jpg">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}images/thumbnail.png">
 
 {{- if site.Params.analytics.googlesiteVerificationTag }}
 <meta name="google-site-verification" content="{{ site.Params.analytics.googlesiteVerificationTag }}">
@@ -71,12 +71,12 @@
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
-{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | resources.ToCSS }}
+{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | css.Sass }}
 
 {{- /* order is important */}}
 {{- $core := (slice $theme_vars $reset $common $commonHighlight $media) | resources.Concat "assets/css/core.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
-{{- $extendedScss := (resources.Match "css/extended/*.scss") | resources.Concat "assets/css/extended.scss" | resources.ToCSS }}
+{{- $extendedScss := (resources.Match "css/extended/*.scss") | resources.Concat "assets/css/extended.scss" | css.Sass }}
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style */ -}}
@@ -103,7 +103,7 @@
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-  {{- if site.GoogleAnalytics }}
+  {{- if site.Config.Services.GoogleAnalytics.ID }}
     {{- template "_internal/google_analytics.html" . }}
   {{- end -}}
   {{- if site.Params.useCustomAnalytics }}

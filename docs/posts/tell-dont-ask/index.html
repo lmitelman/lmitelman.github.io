@@ -15,17 +15,18 @@
 <meta property="og:description" content="Elevating object-oriented practices through a simple and smarter design principle.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://lautaromitelman.com/posts/tell-dont-ask/">
-<meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+<meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.png">
 <meta property="og:site_name" content="lautaromitelman.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LautaroMitelman">
 <meta name="twitter:creator" content="@LautaroMitelman">
 <meta name="twitter:title" content="Tell-Don’t-Ask">
 <meta name="twitter:description" content="Elevating object-oriented practices through a simple and smarter design principle.">
-<meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.324caf84a4f9665cfb62b27ad41d10934ca1e436be3c3f9c5384bc2ae69f71cc.css" integrity="sha256-MkyvhKT5Zlz7YrJ61B0Qk0yh5Da&#43;PD&#43;cU4S8Kuafccw=" rel="preload stylesheet" as="style">
+<meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.png">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.4d7b8936bfae5377a2e43724099a8ff6940ab063c6e6ebf126f758c5961c08fc.css" integrity="sha256-TXuJNr&#43;uU3ei5DckCZqP9pQKsGPG5uvxJvdYxZYcCPw=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lautaromitelman.com/favicon.ico">
 <link rel="apple-touch-icon" href="https://lautaromitelman.com/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://lautaromitelman.com/posts/tell-dont-ask/">
 
 <noscript>
     <style>
@@ -42,7 +43,7 @@
     <meta property="og:description" content="Elevating object-oriented practices through a simple and smarter design principle.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://lautaromitelman.com/posts/tell-dont-ask/">
-    <meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta property="og:image" content="https://lautaromitelman.com/images/thumbnail.png">
     <meta property="og:site_name" content="lautaromitelman.com">
 
     
@@ -51,7 +52,7 @@
     <meta name="twitter:creator" content="@LautaroMitelman">
     <meta name="twitter:title" content="Tell-Don’t-Ask">
     <meta name="twitter:description" content="Elevating object-oriented practices through a simple and smarter design principle.">
-    <meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.jpg">
+    <meta name="twitter:image" content="https://lautaromitelman.com/images/thumbnail.png">
 </head>
 
 <body class=" dark type-posts kind-page layout-" id="top"><script data-no-instant>
@@ -182,8 +183,7 @@ function toggleThemeListener() {
   <div class="post-content"><p>A few weeks ago, one of the best engineers on my team made an important comment in a pull request:</p>
 <blockquote>
 <p><em>&ldquo;Remember not to break the Tell-Don&rsquo;t-Ask principle.&rdquo;</em></p>
-<p>— <a href="https://github.com/hack2024">Fernando Balmaceda</a>, the great.</p>
-</blockquote>
+<p>— <a href="https://github.com/hack2024">Fernando Balmaceda</a>, the great.</p></blockquote>
 <p>Let&rsquo;s delve into this concept a bit&hellip;</p>
 <p>In object-oriented software, a typical use case involves executing logic based on an object&rsquo;s internal state. For instance, consider a scenario where we want to sound an alarm if a thermometer reaches a certain temperature:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>
@@ -213,8 +213,7 @@ function toggleThemeListener() {
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>However, following the Tell-Don&rsquo;t-Ask principle suggests that the logic should reside within the object itself if it is related to that object. In other words, the thermometer should be responsible for sounding the alarm when it reaches a certain temperature. This promotes more object-oriented code as opposed to procedural code.</p>
 <blockquote>
-<p><strong>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</strong></p>
-</blockquote>
+<p><strong>Procedural code gets information then makes decisions. Object-oriented code tells objects to do things.</strong></p></blockquote>
 <p>With this in mind, let&rsquo;s refactor our classes using a &ldquo;telling&rdquo; approach:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Thermometer</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">private</span> <span class="nx">temperature</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
